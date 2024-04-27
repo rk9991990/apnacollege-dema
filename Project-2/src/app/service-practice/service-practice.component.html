@@ -1,0 +1,21 @@
+<p>service-practice works!</p>
+
+<h1>display students data</h1>
+
+<table >
+
+     <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+
+     </tr>
+
+     <tr *ngFor="let stdData of studentData">
+      <td>{{stdData.name}}</td>
+      <td>{{stdData.age}}</td>
+      <td>{{stdData.gender}}</td>
+     </tr>
+
+
+</table>
