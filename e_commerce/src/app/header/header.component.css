@@ -13,22 +13,28 @@
   
   .nav .nav-search input{
   
-   border-right: 0px;
-   flex: 1;
-  
+    color: blueviolet;
+    border: 1px solid blueviolet;
+    height: 32px;
+    border-right: 0px;
+    flex: 1;
   }
   
   .nav .nav-search button{
-  
+    color: blueviolet;
+    border: 1px solid blueviolet;
     cursor: pointer;
+    height: 35px;
     border-left: 0px;
     flex: 1;
   }
   
    .nav .nav-search{
       border-radius: 5px;
-  
+      margin-left: 5%;
+      margin-right: 5%;
     margin-top: 11px;
+    border-radius: 5px;
   
   } 
   .nav h1{
