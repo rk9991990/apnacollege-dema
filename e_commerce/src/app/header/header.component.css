@@ -12,32 +12,30 @@
   } */
   
   .nav .nav-search input{
-   flex: 1;
-  color: blueviolet;
-  border: 1px solid blueviolet;
-  height: 32px;
-  border-right: 0px;
+
+ color: blueviolet;
+    border: 1px solid blueviolet;
+    height: 32px;
+    border-right: 0px;
+    flex: 1;
   }
   
   .nav .nav-search button{
     color: blueviolet;
     border: 1px solid blueviolet;
-    height: 35px;
     cursor: pointer;
+    height: 35px;
     border-left: 0px;
     flex: 1;
   }
   
    .nav .nav-search{
       border-radius: 5px;
-  
-    margin-top: 11px;
-
-    height: 35px;
-      flex: 1;
-      display: flex;
       margin-left: 5%;
       margin-right: 5%;
+    margin-top: 11px;
+    border-radius: 5px;
+  
   
   } 
   .nav h1{
