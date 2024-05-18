@@ -1,0 +1,53 @@
+<div class="conatiner">
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="bg-primary p-8 text-center">
+        <h1>Reactive Form</h1>
+
+      </div>
+
+      <form [formGroup]="signUpFrom" (ngSubmit)="handleSubmit()">
+
+        <div class="form-group">
+
+          <label for="">Enter Name</label>
+          <input type="text" name="name" [class.is-invalid]="f['name'].invalid && f['name'].touched" class="form-control" formControlName="name">
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="">Enter Age</label>
+          <input type="number" name="age" [class.is-invalid]="f['age'].invalid && f['age'].touched " class="form-control" formControlName="age">
+
+        </div>
+        <div class="form-group">
+
+          <label for="">Enter Email</label>
+          <input type="email" name="email" [class.is-invalid]="f['email'].invalid && f['email'].touched" class="form-control" formControlName="email">
+        </div>
+
+        <div class="d-grid" style="margin: 10px;">
+
+          <input type="submit" value="submit" class="btn btn-primary">
+
+
+        </div>
+
+
+
+
+      </form>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+</div>

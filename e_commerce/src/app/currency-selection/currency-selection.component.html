@@ -1,0 +1,26 @@
+<!-- <p>currency-selection works!</p> -->
+<div style="display: flex; align-items: center;  margin-right: 10px">
+  <label for="currencyDropdown" style="color: rgb(153, 192, 68);">Choose a currency</label><br>
+  <select (change)="update($event)" style="text-size-adjust: none;
+color: blueviolet;
+">
+
+
+    <option value="" disabled selected>Please select value
+    </option>
+
+    <option *ngFor="let cur of currency" [value]="cur">
+
+      {{cur}}
+
+
+
+    </option>
+  </select>
+
+  <label for=""> Type Package</label><br>
+  <input type="text" placeholder="type here your package" style="margin: 5px;">
+  <input type="text" disabled placeholder="per year" style="width: 6%">
+</div>
+ 
+<!-- <p>your selected currency is : {{currency_selection}}</p> -->

@@ -1,0 +1,37 @@
+<!-- <p>seller-auth works!</p> -->
+<!-- <option value=""></option>
+<input type="text" name="" id="" placeholder="Please select here to view data" style="width: 12%;">
+<button>Click Here</button> -->
+
+<select (change)="update($event)">
+  <option value="" disabled selected>Please select player from dropdown</option>
+ 
+<option *ngFor="let player of players" [value]="player">
+ 
+  {{player}}
+
+  
+
+</option>
+</select>
+
+<p>your selected player is : {{Selected}}</p>
+<!-- if (Selected===default){
+<p>your selected player is :{{}}</p>
+
+else{
+
+  <p>your selected player is :{{Selected}}</p>
+}
+} -->
+<!-- <div *ngIf="Selected">
+
+your selected player is :
+
+
+</div>
+<div *ngIf!="Selected">
+
+  your selected player is :{{Selected}}
+
+</div> -->
