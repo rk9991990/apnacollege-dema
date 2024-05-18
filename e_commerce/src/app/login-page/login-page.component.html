@@ -1,0 +1,91 @@
+<div class="conatiner">
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="bg-primary p-8 text-center">
+        <h1>Reactive Form</h1>
+
+      </div>
+
+      <form [formGroup]="signUpFrom" (ngSubmit)="handleSubmit()">
+
+        <div class="form-group">
+        
+          <label for="">Enter Name</label>
+          <input type="text" name="name" [class.is-invalid]="f['name'].invalid && f['name'].touched" class="form-control"
+            formControlName="name">
+        
+          <div class="alert alert-danger" *ngIf="f['name'].invalid && f['name'].touched">
+           
+              <div *ngIf="f['name'].errors && f['name'].errors['required']">
+                Name is required
+              </div>  
+              <div *ngIf="f['name'].errors && f['name'].errors['minlength']">
+                3 characters must
+              </div>
+              <div *ngIf="f['name'].errors && f['name'].errors['maxlength']">
+                25 characters maximum
+              </div>
+        
+          </div>
+        
+        </div>
+
+
+        <div class="form-group">
+        
+          <label for="">Enter Age</label>
+          <input type="number" name="age" [class.is-invalid]="f['age'].invalid && f['age'].touched " class="form-control"
+            formControlName="age">
+        
+          <div class="alert alert-danger" *ngIf="f['age'].invalid && f['age'].touched">
+            <div *ngIf="f['age'].errors && f['age'].errors['required']">
+              Age is required
+            </div>
+            <div *ngIf="f['age'].errors && f['age'].errors['min']">
+              minimum age 10 
+            </div>
+            <div *ngIf="f['age'].errors && f['age'].errors['max']">
+              Max age is 60
+            </div>
+        
+          </div>
+        
+        </div>
+        <div class="form-group">
+
+          <label for="">Enter Email</label>
+          <input type="email" name="email" [class.is-invalid]="f['email'].invalid && f['email'].touched" class="form-control" formControlName="email">
+
+          <div class="alert alert-danger" *ngIf="f['email'].invalid && f['email'].touched">
+            <div *ngIf="f['email'].errors && f['email'].errors['required']">
+              E-mail is required
+            </div>
+            <div *ngIf="f['email'].errors && f['email'].errors['email']">
+              Please enter valid email
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid" style="margin: 10px;">
+
+          <input type="submit" [class.disabled]="signUpFrom.invalid" value="submit" class="btn btn-primary">
+
+
+        </div>
+
+
+
+
+      </form>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+</div>

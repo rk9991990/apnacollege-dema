@@ -1,0 +1,28 @@
+<!-- <p>home works!</p> -->
+
+<table>
+<thead>
+ <tr>
+   <th>Sr. Number</th>
+   <th>First Name</th>
+   <th>Middle Name</th>
+   <th>Last Name</th>
+   <th>Emp Id</th>
+   <th>Designation</th>
+ </tr>
+
+ <tr *ngFor="let empData of emp_details">
+  <td>{{empData.sr_number}}</td>
+  <td>{{empData.first_name}}</td>
+  <td>{{empData.middle_name}}</td>
+  <td>{{empData.last_name}}</td>
+  <td>{{empData.emp_id}}</td>
+  <td>{{empData.designation}}</td>
+
+
+ </tr>
+
+</thead>
+
+
+</table>
