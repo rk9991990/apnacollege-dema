@@ -11,9 +11,9 @@ export class LoginPageComponent {
  
   signUpFrom= new FormGroup({
 
-      name:new FormControl('' ,[Validators.required]),
-      age:new FormControl('' , [Validators.required]),
-      email:new FormControl('',[Validators.required])
+      name:new FormControl('' ,[Validators.required,Validators.minLength(3),Validators.maxLength(25)]),
+      age:new FormControl('' , [Validators.required,Validators.min(10),Validators.max(60) ]),
+      email:new FormControl('',[Validators.required,Validators.email])
 
 
 
