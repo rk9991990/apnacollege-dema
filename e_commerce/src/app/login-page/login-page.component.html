@@ -26,6 +26,9 @@
               <div *ngIf="f['name'].errors && f['name'].errors['maxlength']">
                 25 characters maximum
               </div>
+              <div *ngIf="f['name'].errors && f['name'].errors['pattern']">
+                Numerical and special character not allowed.
+              </div>
         
           </div>
         
@@ -61,9 +64,12 @@
             <div *ngIf="f['email'].errors && f['email'].errors['required']">
               E-mail is required
             </div>
-            <div *ngIf="f['email'].errors && f['email'].errors['email']">
+            <div *ngIf="f['email'].errors && f['email'].errors['pattern']">
               Please enter valid email
             </div>
+            <div *ngIf="f">
+
+            </div> 
           </div>
         </div>
 
